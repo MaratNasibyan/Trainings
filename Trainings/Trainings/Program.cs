@@ -87,6 +87,32 @@ namespace Trainings
             Console.Read();
         }
 
+        public static void Exception5()
+        {
+            // when in catch block there is throw , that means the exception pass to next step 
+            try
+            {
+                try
+                {
+                    Console.Write("Введите строку: ");
+                    string message = Console.ReadLine();
+                    if (message.Length > 6)
+                    {
+                        throw new Exception("Длина строки больше 6 символов");
+                    }
+                }
+                catch
+                {
+                    Console.WriteLine("Возникло исключение");
+                    throw;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
         #endregion
 
         static void Main(string[] args)
