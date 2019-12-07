@@ -5,6 +5,7 @@ namespace Trainings
     class Program
     {
         #region Exception
+
         public static void Exception1()
         {
             try
@@ -116,7 +117,7 @@ namespace Trainings
         #endregion
 
         static void Main(string[] args)
-        {
+        {            
             //Exception1();
             Exception2();
             Console.WriteLine("Hello World!");
