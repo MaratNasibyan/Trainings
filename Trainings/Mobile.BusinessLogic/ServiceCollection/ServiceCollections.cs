@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System;
+using System.Text;
+using System.Collections.Generic;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mobile.Abstraction;
 using Mobile.Repository.RepositoryCollection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Mobile.BusinessLogic.ServiceCollection
 {

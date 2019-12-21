@@ -28,6 +28,7 @@ namespace Mobile.API
         public void ConfigureServices(IServiceCollection services)
         {
             services.ConfigureServices(Configuration);
+
             services.AddControllers();
         }
 
