@@ -5,7 +5,7 @@ using Mobile.DBMap.Northwind_Models;
 using Mobile.Repository.Abstraction;
 using System.Linq;
 
-namespace Mobile.Repository.RepositoryCollection
+namespace Mobile.Repository.Repositories
 {
     public class DataRepository : IDataRepository
     {

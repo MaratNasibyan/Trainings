@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Mobile.BusinessLogic
+namespace Mobile.BusinessLogic.Services
 {
     public class DataService : IDataService
     {

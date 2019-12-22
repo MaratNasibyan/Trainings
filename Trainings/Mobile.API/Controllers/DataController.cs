@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 using Mobile.Abstraction;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Mobile.Models;
 
 namespace Mobile.API.Controllers
@@ -20,9 +20,14 @@ namespace Mobile.API.Controllers
             this.dataService = dataService;
         }
 
-        public IEnumerable<CustomerModel> GetCustomers()
+        [HttpGet]
+        public Response<IEnumerable<CustomerModel>> GetCustomers()
         {
-            return this.dataService.GetCustomers();
+            var result = this.dataService.GetCustomers();
+
+            Response<IEnumerable<CustomerModel>> response = new Response<IEnumerable<CustomerModel>>(result);
+
+            return response;
         }
     }
 }

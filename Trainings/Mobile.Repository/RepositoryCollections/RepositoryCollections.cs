@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Mobile.DBMap.Northwind_Models;
 using Mobile.Repository.Abstraction;
+using Mobile.Repository.Repositories;
 
 namespace Mobile.Repository.RepositoryCollection
 {

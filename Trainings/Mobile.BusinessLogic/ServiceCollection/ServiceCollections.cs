@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Mobile.Abstraction;
 using Mobile.Repository.RepositoryCollection;
+using Mobile.BusinessLogic.Services;
 
 namespace Mobile.BusinessLogic.ServiceCollection
 {
