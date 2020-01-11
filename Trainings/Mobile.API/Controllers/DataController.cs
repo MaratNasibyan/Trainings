@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Mobile.Abstraction;
-
 using Mobile.Models;
 using System;
 using System.Net;
