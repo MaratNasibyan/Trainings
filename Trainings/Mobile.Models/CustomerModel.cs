@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-
-namespace Mobile.Models
+﻿namespace Mobile.Models
 {
     public class CustomerModel
     {

@@ -1,20 +1,18 @@
 ﻿using Mobile.Abstraction;
 using Mobile.Models;
 using Mobile.Repository.Abstraction;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Mobile.BusinessLogic.Services
 {
     public class DataService : IDataService
     {
-        private readonly IDataRepository dataRepository; 
+        private readonly IDataRepository dataRepository;
 
         public DataService(IDataRepository dataRepository)
         {
             this.dataRepository = dataRepository;
-        }
+        }   
 
         public IEnumerable<CustomerModel> GetCustomers()
         {
@@ -40,8 +38,8 @@ namespace Mobile.BusinessLogic.Services
                         PostalCode = result.PostalCode,
                         Region = result.Region
                     });
-                }               
-            }               
+                }
+            }
 
             return customers;
         }

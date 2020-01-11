@@ -1,7 +1,5 @@
-﻿using System;
-using System.Text;
+﻿using Mobile.DBMap.Northwind_Models;
 using System.Collections.Generic;
-using Mobile.DBMap.Northwind_Models;
 
 namespace Mobile.Repository.Abstraction
 {

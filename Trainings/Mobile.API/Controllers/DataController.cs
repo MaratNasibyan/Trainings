@@ -1,19 +1,19 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.Mvc;
 using Mobile.Abstraction;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
+using Mobile.API.Helpers;
+using Mobile.API.Scheduler;
 using Mobile.Models;
+using System;
+using System.Net;
+using System.Net.Http;
 
 namespace Mobile.API.Controllers
 {
     [Route("[controller]/[action]")]
     [ApiController]
-    public class DataController
+    public class DataController : BaseController
     {
-        private readonly IDataService dataService;
+        private readonly IDataService dataService;                
 
         public DataController(IDataService dataService)
         {
@@ -21,11 +21,20 @@ namespace Mobile.API.Controllers
         }
 
         [HttpGet]
-        public Response<IEnumerable<CustomerModel>> GetCustomers()
+        public IResponse GetCustomers()
         {
-            var result = this.dataService.GetCustomers();
+            IResponse response;
 
-            Response<IEnumerable<CustomerModel>> response = new Response<IEnumerable<CustomerModel>>(result);
+            try
+            {
+                var result = this.dataService.GetCustomers();
+                
+                response = new ResponseSuccess(result);
+            }
+            catch (Exception ex)
+            {
+                response = this.GetFailedResponse("Error", ex.Message);
+            }          
 
             return response;
         }
