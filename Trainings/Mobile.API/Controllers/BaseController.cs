@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 
 namespace Mobile.API.Controllers
 {
+    [Route("[controller]/[action]")]
+    [ApiController]
     public class BaseController : ControllerBase
     {
+
+        #region Response
+
         public IResponse GetFailedResponse(string developerErrorMessage, string friendlyErrorMessage)
         {
             return new ResponseError
@@ -21,5 +26,7 @@ namespace Mobile.API.Controllers
                 }
             };
         }
+
+        #endregion
     }
 }

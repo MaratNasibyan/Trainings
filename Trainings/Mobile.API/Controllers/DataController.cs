@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Mobile.Abstraction;
-using Mobile.API.Helpers;
-using Mobile.API.Scheduler;
+
 using Mobile.Models;
 using System;
 using System.Net;
@@ -9,8 +8,7 @@ using System.Net.Http;
 
 namespace Mobile.API.Controllers
 {
-    [Route("[controller]/[action]")]
-    [ApiController]
+   
     public class DataController : BaseController
     {
         private readonly IDataService dataService;                
@@ -38,5 +36,6 @@ namespace Mobile.API.Controllers
 
             return response;
         }
+
     }
 }
